@@ -1,5 +1,5 @@
 ## S-Task
-Just a simple, beautiful and open source To Do list for Android 4.0.3+.
+Just a simple, beautiful, offline and open source To Do list for Android 4.0.3+.
 
 [![Download App](https://github.com/adrielcafe/S-Task/raw/master/images/google-play.png)](https://play.google.com/store/apps/details?id=com.adrielcafe.stask)
 
