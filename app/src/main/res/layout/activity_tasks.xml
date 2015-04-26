@@ -17,8 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        android:divider="@color/primary_dark"
-        android:dividerHeight="0.5dp"/>
+        android:divider="@color/accent"
+        android:dividerHeight="0.25dp"/>
 
     <com.melnykov.fab.FloatingActionButton
         android:id="@+id/fab"
@@ -27,8 +27,8 @@
         android:layout_gravity="bottom|right"
         android:layout_margin="16dp"
         android:src="@drawable/ic_add"
-        app:fab_colorNormal="@color/primary"
-        app:fab_colorPressed="@color/primary_dark"
+        app:fab_colorNormal="@color/primary_dark"
+        app:fab_colorPressed="@color/primary"
         app:fab_colorRipple="@color/accent" />
 
 </FrameLayout>
