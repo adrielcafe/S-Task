@@ -1,6 +1,15 @@
 ## S-Task
 Just a simple, beautiful and open source To Do list for Android 4.0.3+.
 
+[![Download App](https://github.com/adrielcafe/S-Task/raw/master/images/google-play.png)](https://play.google.com/store/apps/details?id=com.adrielcafe.stask)
+
+### ScreenShots
+![ScreenShot1](https://github.com/adrielcafe/S-Task/raw/master/images/screenshot-1.png)
+![ScreenShot2](https://github.com/adrielcafe/S-Task/raw/master/images/screenshot-2.png)
+![ScreenShot3](https://github.com/adrielcafe/S-Task/raw/master/images/screenshot-3.png)
+![ScreenShot4](https://github.com/adrielcafe/S-Task/raw/master/images/screenshot-4.png)
+![ScreenShot5](https://github.com/adrielcafe/S-Task/raw/master/images/screenshot-5.png)
+
 ### Thanks To
 * [Sugar ORM](https://github.com/satyan/sugar)
 * [NiftyDialogEffects](https://github.com/sd6352051/NiftyDialogEffects)
@@ -12,7 +21,7 @@ Just a simple, beautiful and open source To Do list for Android 4.0.3+.
 ```
 The MIT License (MIT)
 
-Copyright (c) 2015 Adriel Café
+Copyright (c) 2015 Adriel Café, Filipe Santana, Fred Freitas
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
