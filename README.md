@@ -1,3 +1,5 @@
+![Banner](https://github.com/adrielcafe/S-Task/raw/master/images/banner.jpg)
+
 ## S-Task
 Just a simple, beautiful, offline and open source To Do list for Android 4.0.3+.
 
