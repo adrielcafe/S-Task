@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.adrielcafe.stask"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+
+    // http://github.com/satyan/sugar
+    compile 'com.github.satyan:sugar:1.3.1@aar'
+
+    // http://github.com/sd6352051/NiftyDialogEffects
+    compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
+
+    // http://github.com/daimajia/AndroidSwipeLayout
+    compile "com.daimajia.swipelayout:library:1.2.0@aar"
+
+    // http://github.com/makovkastar/FloatingActionButton
+    compile 'com.melnykov:floatingactionbutton:1.3.0@aar'
+
+    // http://github.com/marvinlabs/android-floatinglabel-widgets
+    compile 'com.marvinlabs:android-floatinglabel-widgets:1.6.1@aar'
+
+}

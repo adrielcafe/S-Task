@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">S-Task</string>
+    <string name="new_task">New Task</string>
+    <string name="close">Close</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="forgot_title">Forgot the Title?</string>
+</resources>
