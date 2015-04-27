@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">S-Task</string>
     <string name="new_task">New Task</string>
+    <string name="edit_task">Edit Task</string>
     <string name="close">Close</string>
     <string name="edit">Edit</string>
     <string name="save">Save</string>

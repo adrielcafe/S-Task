@@ -25,7 +25,7 @@ public class TaskAdapter extends ArrayAdapter<Task> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        final Task task = getItem(position);
+        Task task = getItem(position);
         ViewHolder viewHolder;
 
         if (convertView == null) {
@@ -43,13 +43,19 @@ public class TaskAdapter extends ArrayAdapter<Task> {
             viewHolder = (ViewHolder) convertView.getTag();
         }
 
-        viewHolder.title.setText(task.getTitle());
-        if(task.isCompleted()){
+        viewHolder.title.setText(task.title);
+        if(task.completed){
             viewHolder.complete.setBackgroundColor(getContext().getResources().getColor(R.color.accent));
         } else {
             viewHolder.complete.setBackgroundColor(getContext().getResources().getColor(R.color.gray));
         }
 
+        setListeners(viewHolder, task);
+
+        return convertView;
+    }
+
+    private void setListeners(ViewHolder viewHolder, final Task task){
         final SwipeLayout swipeLayout = viewHolder.swipeLayout;
         final View completeView = viewHolder.complete;
         viewHolder.title.setOnClickListener(new View.OnClickListener() {
@@ -86,9 +92,6 @@ public class TaskAdapter extends ArrayAdapter<Task> {
                 swipeLayout.toggle(true);
             }
         });
-
-
-        return convertView;
     }
 
     private static class ViewHolder {

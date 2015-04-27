@@ -20,9 +20,7 @@ public class TaskEditActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         setContentView(R.layout.activity_task_edit);
 
         titleView = (FloatingLabelEditText) findViewById(R.id.title);
@@ -32,11 +30,13 @@ public class TaskEditActivity extends ActionBarActivity {
         descriptionView.getInputWidget().setMaxLines(5);
 
         if(getIntent().hasExtra(App.EXTRA_TASK_ID)){
+            setTitle(R.string.edit_task);
             long taskId = getIntent().getLongExtra(App.EXTRA_TASK_ID, -1);
             task = Task.findById(Task.class, taskId);
-            titleView.setInputWidgetText(task.getTitle());
-            descriptionView.setInputWidgetText(task.getDescription());
+            titleView.setInputWidgetText(task.title);
+            descriptionView.setInputWidgetText(task.description);
         } else {
+            setTitle(R.string.new_task);
             task = new Task();
         }
     }
@@ -63,8 +63,8 @@ public class TaskEditActivity extends ActionBarActivity {
     }
 
     private void saveTask(){
-        task.setTitle(titleView.getInputWidgetText().toString());
-        task.setDescription(descriptionView.getInputWidgetText().toString());
+        task.title = titleView.getInputWidgetText().toString();
+        task.description = descriptionView.getInputWidgetText().toString();
         task.save();
 
         setResult(RESULT_OK);

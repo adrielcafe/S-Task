@@ -28,10 +28,8 @@ public class TasksActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.drawable.ic_logo);
-
         setContentView(R.layout.activity_tasks);
 
         tasksList = (ListView) findViewById(android.R.id.list);
@@ -61,6 +59,7 @@ public class TasksActivity extends ActionBarActivity {
                 .from(Task.class)
                 .orderBy("id DESC")
                 .list();
+
         if(tasks.isEmpty()){
             background.setVisibility(View.VISIBLE);
             tasksList.setVisibility(View.GONE);
@@ -91,8 +90,8 @@ public class TasksActivity extends ActionBarActivity {
 
     public void showTask(final Task task){
         final NiftyDialogBuilder dialog = NiftyDialogBuilder.getInstance(this);
-        dialog.withTitle(task.getTitle())
-                .withMessage(task.getDescription())
+        dialog.withTitle(task.title)
+                .withMessage(task.description)
                 .withDialogColor(getResources().getColor(R.color.primary))
                 .withEffect(Effectstype.SlideBottom)
                 .withDuration(300)
@@ -107,11 +106,11 @@ public class TasksActivity extends ActionBarActivity {
     }
 
     public void toggleTaskComplete(Task task, View completeView){
-        if(task.isCompleted()){
-            task.setCompleted(false);
+        if(task.completed){
+            task.completed = false;
             completeView.setBackgroundColor(getResources().getColor(R.color.gray));
         } else {
-            task.setCompleted(true);
+            task.completed = true;
             completeView.setBackgroundColor(getResources().getColor(R.color.accent));
         }
         task.save();
