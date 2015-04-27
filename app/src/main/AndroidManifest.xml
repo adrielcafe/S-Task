@@ -9,7 +9,6 @@
         android:icon="@mipmap/ic_launcher"
         android:theme="@style/AppTheme">
 
-        <!-- Activity Principal -->
         <activity android:name=".ui.TasksActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,14 +16,12 @@
             </intent-filter>
         </activity>
 
-        <!-- Activity para Criação e Atualização das Tarefas -->
         <activity
             android:name=".ui.TaskEditActivity"
             android:label="@string/new_task"/>
 
-        <!-- Configuração do Sugar ORM -->
         <meta-data android:name="DATABASE" android:value="stask.db" />
-        <meta-data android:name="VERSION" android:value="1" />
+        <meta-data android:name="VERSION" android:value="2" />
         <meta-data android:name="QUERY_LOG" android:value="true" />
         <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.adrielcafe.stask" />
 

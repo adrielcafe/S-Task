@@ -107,11 +107,11 @@ public class TasksActivity extends ActionBarActivity {
     }
 
     public void toggleTaskComplete(Task task, View completeView){
-        if(task.completed){
-            task.completed = false;
+        if(task.done){
+            task.done = false;
             completeView.setBackgroundColor(getResources().getColor(R.color.gray));
         } else {
-            task.completed = true;
+            task.done = true;
             completeView.setBackgroundColor(getResources().getColor(R.color.accent));
         }
         task.save();

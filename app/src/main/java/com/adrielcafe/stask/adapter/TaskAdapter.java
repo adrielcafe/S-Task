@@ -44,7 +44,7 @@ public class TaskAdapter extends ArrayAdapter<Task> {
         }
 
         viewHolder.title.setText(task.title);
-        if(task.completed){
+        if(task.done){
             viewHolder.complete.setBackgroundColor(getContext().getResources().getColor(R.color.accent));
         } else {
             viewHolder.complete.setBackgroundColor(getContext().getResources().getColor(R.color.gray));
