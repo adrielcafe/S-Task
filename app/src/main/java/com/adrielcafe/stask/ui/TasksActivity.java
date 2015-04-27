@@ -1,5 +1,6 @@
 package com.adrielcafe.stask.ui;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -49,7 +50,7 @@ public class TasksActivity extends ActionBarActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode == resultCode){
+        if(resultCode == Activity.RESULT_OK){
             loadTasks();
         }
     }
