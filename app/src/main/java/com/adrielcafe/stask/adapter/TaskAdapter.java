@@ -37,7 +37,7 @@ public class TaskAdapter extends ArrayAdapter<Task> {
             viewHolder.show = (ImageView) convertView.findViewById(R.id.show);
             viewHolder.edit = (ImageView) convertView.findViewById(R.id.edit);
             viewHolder.delete = (ImageView) convertView.findViewById(R.id.delete);
-            viewHolder.toggleComplete = (ImageView) convertView.findViewById(R.id.toggleComplete);
+            viewHolder.toggleStatus = (ImageView) convertView.findViewById(R.id.toggleStatus);
             convertView.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) convertView.getTag();
@@ -57,7 +57,7 @@ public class TaskAdapter extends ArrayAdapter<Task> {
 
     private void setListeners(ViewHolder viewHolder, final Task task){
         final SwipeLayout swipeLayout = viewHolder.swipeLayout;
-        final View completeView = viewHolder.complete;
+        final View statusView = viewHolder.complete;
         viewHolder.title.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,10 +85,10 @@ public class TaskAdapter extends ArrayAdapter<Task> {
                 swipeLayout.toggle(true);
             }
         });
-        viewHolder.toggleComplete.setOnClickListener(new View.OnClickListener() {
+        viewHolder.toggleStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activity.toggleTaskComplete(task, completeView);
+                activity.toggleTaskStatus(task, statusView);
                 swipeLayout.toggle(true);
             }
         });
@@ -101,6 +101,6 @@ public class TaskAdapter extends ArrayAdapter<Task> {
         ImageView show;
         ImageView edit;
         ImageView delete;
-        ImageView toggleComplete;
+        ImageView toggleStatus;
     }
 }

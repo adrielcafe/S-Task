@@ -106,13 +106,13 @@ public class TasksActivity extends ActionBarActivity {
                 .show();
     }
 
-    public void toggleTaskComplete(Task task, View completeView){
+    public void toggleTaskStatus(Task task, View statusView){
         if(task.done){
             task.done = false;
-            completeView.setBackgroundColor(getResources().getColor(R.color.gray));
+            statusView.setBackgroundColor(getResources().getColor(R.color.gray));
         } else {
             task.done = true;
-            completeView.setBackgroundColor(getResources().getColor(R.color.accent));
+            statusView.setBackgroundColor(getResources().getColor(R.color.accent));
         }
         task.save();
     }
